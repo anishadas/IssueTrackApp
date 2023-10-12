@@ -1,9 +1,7 @@
 const mongoose = require('mongoose');
-const connectURI = 'mongodb://localhost:27017/IssueTracker' || 'mongodb://127.0.0.1:27017/IssueTracker'
-mongoose.set('strictQuery', false);
-mongoose.connect(connectURI, {
-    useNewUrlParser:true,useUnifiedTopology:true
-});
+const connectURI = 'mongodb+srv://payalad10:fRe0OdrqN5p1zBRG@cluster0.tooo4ly.mongodb.net/?retryWrites=true&w=majority'
+// mongoose.set('strictQuery', false);
+mongoose.connect(connectURI);
 
 const db = mongoose.connection;
 
