@@ -1,0 +1,130 @@
+
+
+<section id="options">
+    <p>Active Issues</p>
+
+    <form id="search" action method="get">
+        <input type="text" placeholder="search for issue title or description"
+            name="search" />
+        <button id="search-btn" type="submit">
+            <img src="https://cdn-icons-png.flaticon.com/128/10947/10947920.png" />
+        </button>
+    </form>
+    <div id="filters">
+        <button type="button" data-bs-toggle="modal"
+            data-bs-target="#modal3" id="filter">
+            filter issues
+        </button>
+
+        <a href="/project/<%= project._id %>">show all</a>
+    </div>
+    <section id="show-all-issues">
+        <ul id="all-issues-list">
+            <% for(issue of issues){ %>
+            <li id="issue-<%= issue._id %>">
+                <div class="issue-icon">
+                    <img
+                        src="https://cdn-icons-png.flaticon.com/128/8812/8812098.png" />
+                </div>
+                <div class="issues-container-list">
+                    <div class="issue-details">
+                        <div class="details">
+                            <p>Title: <%= issue.title %></p>
+                            <p>Author: <%= issue.author %></p>
+                            <p>Issue Description: <%= issue.issueDescription %></p>
+                        </div>
+                        <div class="delete-icon"
+                            data="/project/issue/delete/<%= issue._id  %>">
+                            <img
+                                src="https://cdn-icons-png.flaticon.com/128/3221/3221897.png" />
+                        </div>
+                    </div>
+
+                    <div class="issue-labels">
+                        <% for(label of issue.labels){ %>
+                        <p><%= label %></p>
+                        <% } %>
+                    </div>
+                </div>
+
+            </li>
+            <% } %>
+
+        </ul>
+    </section>
+
+</section>
+
+<!-- show all option -->
+
+<!-- modals -->
+<div class="modal fade" id="modal3" tabindex="-1"
+    aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Filter
+                    Issues</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="filter-container">
+                    <div class="issue-container">
+                        <p class="heading">Search Labels </p>
+                        <div class="names">
+                            <label class="issue">
+                                <input type="checkbox" id="bug" name="issue"
+                                    value="Bug" />
+                                Bug
+                            </label>
+
+                            <label class="issue">
+                                <input type="checkbox" id="improvement"
+                                    name="issue" value="improvement" />
+                                UI Improvement
+                            </label>
+
+                            <label class="issue">
+                                <input type="checkbox" id="enhancement"
+                                    name="issue" value="enhancement" />
+                                Enhancement
+                            </label>
+
+                            <label class="issue">
+                                <input type="checkbox" id="duplicate"
+                                    name="issue" value="duplicate" />
+                                Duplicate
+                            </label>
+                        </div>
+                    </div>
+                    <div class="author-container">
+                        <p class="heading">Author </p>
+                        <div class="names">
+
+                            <label for="anny">
+                                <input type="radio" id="anny" name="author"
+                                    value="anny">
+                                Anny
+                            </label>
+
+                            <label for="anisha">
+                                <input type="radio" id="anisha" name="author"
+                                    value="anisha">
+                                Anisha
+                            </label>
+                        </div>
+
+                    </div>
+                    <div class="btns">
+                        <button type="submit" class="btn btn2">Filter Issues</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- for sendng data to js file -->
+<div id="issue-data" data="<%= JSON.stringify(issues) %>"></div>
+

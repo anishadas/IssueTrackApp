@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif; }
+
+#singlepage {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-top: 100px; }
+  #singlepage #details {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; }
+    #singlepage #details #cards {
+      border: 2px solid #2d9999;
+      border-right: 1px solid #2d9999;
+      border-top: 1px solid #2d9999;
+      padding: 15px;
+      width: 80%;
+      border-radius: 5px;
+      box-shadow: rgba(45, 153, 153, 0.4) -5px 5px, rgba(45, 153, 153, 0.3) -10px 10px, rgba(45, 153, 153, 0.2) -15px 15px, rgba(45, 153, 153, 0.1) -20px 20px, rgba(45, 153, 153, 0.05) -25px 25px; }
+      #singlepage #details #cards p {
+        width: 100%;
+        padding: 15px;
+        font-size: 1.5rem;
+        color: white;
+        margin: 0;
+        text-transform: capitalize; }
+      #singlepage #details #cards #name {
+        background-color: #2d9999; }
+      #singlepage #details #cards #desc {
+        background-color: black; }
+      #singlepage #details #cards #author {
+        background-color: white;
+        color: black; }
+    #singlepage #details #issue-btn {
+      position: relative;
+      background-color: darkgreen;
+      padding: 10px;
+      border-radius: 5px;
+      color: white;
+      font-size: 1rem;
+      border: none;
+      width: 80%;
+      margin-top: 40px;
+      box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset; }
+  #singlepage #all-issue-options-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%; }

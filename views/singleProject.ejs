@@ -1,0 +1,30 @@
+<link rel="stylesheet" href="/css/singleProject.css">
+<link rel="stylesheet" href="/css/issueForm.css">
+<link rel="stylesheet" href="/css/issues.css">
+<div id="singlepage">
+    <section id="details">
+        <div id="cards">
+            <p id="name">
+                project: <%= project.name %>
+            </p>
+            <p id="author">
+                author: <%= project.author %>
+            </p>
+            <p id="desc">
+                description: <%= project.description %>
+            </p>
+        </div>
+        <button id="issue-btn" type="button" data-bs-toggle="modal"
+            data-bs-target="#modal2">
+            Create Issue
+        </button>
+        <%- include('_issueForm') ; %>
+    </section>
+
+    <section id="all-issue-options-container">
+        <%- include('_issues') ; %>
+    </section>
+
+</div>
+<script src="/js/singleProject.js"></script>
+

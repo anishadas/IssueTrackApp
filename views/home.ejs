@@ -1,0 +1,18 @@
+<link rel="stylesheet" href="/css/home.css">
+<div>
+    <section>
+        <button id="btn1" type="button" data-bs-toggle="modal"
+            data-bs-target="#exampleModal">create new project</button>
+        <%- include('_projectForm') ; %>
+        <div id="projects-list">
+            <h4>My Projects</h4>
+            <ul id="projects-list-container">
+                <% for(project of projects){ %>
+                <%- include('_project_list') ; %>
+                <% } %>
+            </ul>
+        </div>
+
+    </section>
+</div>
+<script src="/js/projects.js"></script>

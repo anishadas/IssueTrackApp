@@ -1,0 +1,28 @@
+<div class="modal fade" id="exampleModal" tabindex="-1"
+  aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Create New Project</h1>
+      </div>
+      <div class="modal-body">
+        <form id="new-project" method="post" accept="/project/create">
+          <label for="projectName">Name Of the project : </label>
+          <input type="text" id="projectName" name="projectName"
+            placeholder="project name" />
+
+          <label for="author">Author : </label>
+          <input type="text" id="author" name="author" placeholder="Author name" />
+
+          <label for="description">Description : </label>
+          <textarea id="description" name="description"
+            placeholder="Describe your project"></textarea>
+          <div class="btns">
+            <button type="button" class="btn btn1" data-bs-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn2">Create Project</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

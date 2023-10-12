@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+.modal-content .header {
+  padding: 0 !important; }
+  .modal-content .header h1 {
+    width: 100%;
+    text-align: center;
+    font-size: 1rem; }
+
+.modal-content .modal-body form label {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+  .modal-content .modal-body form label input,
+  .modal-content .modal-body form label textarea {
+    width: 70%; }
+
+.modal-content .modal-body form .issue-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 5px; }
+  .modal-content .modal-body form .issue-container .heading {
+    width: 30%;
+    font-size: 1.1rem;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+    margin-top: 12px; }
+  .modal-content .modal-body form .issue-container .names {
+    width: 70%;
+    display: flex;
+    flex-direction: column; }
+    .modal-content .modal-body form .issue-container .names label {
+      justify-content: flex-start; }
+      .modal-content .modal-body form .issue-container .names label input {
+        width: fit-content;
+        margin-right: 5px; }

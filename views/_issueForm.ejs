@@ -1,0 +1,69 @@
+<div class="modal fade" id="modal2" tabindex="-1"
+    aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Create a
+                    Issue</h1>
+            </div>
+            <div class="modal-body">
+                <form id="new-issue">
+                    <label for="title">
+                        Title :
+                        <input type="text" id="title" name="title"
+                            placeholder="issue name" />
+                    </label>
+
+                    <label for="author">
+                        Author :
+                        <input type="text" id="author" name="author"
+                            placeholder="Author name" />
+                    </label>
+
+                    <label for="descriptionIssue">
+                        Description :
+                        <textarea id="descriptionIssue" name="description"
+                            placeholder="Describe your issue"></textarea>
+                    </label>
+                    <input type="hidden" value="<%= project._id %>" name="id"/>
+
+                    <div class="issue-container">
+                        <p class="heading">Add Labels :</p>
+                        <div class="names">
+                            <label class="issue">
+                                <input type="checkbox" id="bug" name="issue"
+                                    value="Bug" />
+                                Bug
+                            </label>
+
+                            <label class="issue">
+                                <input type="checkbox" id="improvement"
+                                    name="issue" value="UI Improvement" />
+                                UI Improvement
+                            </label>
+
+                            <label class="issue">
+                                <input type="checkbox" id="enhancement"
+                                    name="issue" value="Enhancement" />
+                                Enhancement
+                            </label>
+
+                            <label class="issue">
+                                <input type="checkbox" id="duplicate"
+                                    name="issue" value="Duplicate" />
+                                Duplicate
+                            </label>
+                        </div>
+
+                    </div>
+
+                    <div class="btns">
+                        <button type="button" class="btn btn1"
+                            data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn2">Create Issue</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+<li id="project-<%= project._id %>">
+    <div class="project-header">
+
+        <p class="project-name"><span>Name of the project :</span><%=
+            project.name %></p>
+        <div class="del-project-icon" data="/project/delete/<%= project._id %>">
+            <img src="https://cdn-icons-png.flaticon.com/128/484/484662.png" />
+        </div>
+    </div>
+
+    <div class="details">
+        <div>
+            <p><span>Author :</span><%= project.author %></p>
+            <p><span>Description :</span><%= project.description %></p>
+        </div>
+        <button>
+            <!-- open project -->
+            <a class="open-project" href="/project/<%= project._id %>">Open
+                Project</a>
+        </button>
+    </div>
+</li>
