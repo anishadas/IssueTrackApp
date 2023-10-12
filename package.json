@@ -4,8 +4,8 @@
   "description": "issue tracker app",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js",
-    "build": "npm i",
+    "start": "node index.js",
+    "build": "npm install",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "anisha das",
